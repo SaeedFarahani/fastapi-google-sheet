@@ -3,7 +3,7 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 
-class contact(BaseModel):
+class Contract(BaseModel):
     firstname: str
     lastname: str
     street: str
@@ -13,3 +13,7 @@ class contact(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class Contracts:
+    data: List[Contract]
