@@ -1,5 +1,6 @@
 */data/
 !.gitignore
+/.idea
 esrc/*
 *.pyc
 *.whl
@@ -9,7 +10,7 @@ cert.*
 *.tar.*
 *.zip
 *.log
-
+conf/*.json
 **/data/*
 !**/.gitkeep.txt
 __pycache__/
