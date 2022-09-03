@@ -25,8 +25,8 @@ class Contract(BaseModel):
         orm_mode = True
 
 
-class Contracts:
-    data: List[Contract]
+class Contracts(ResponseBase):
+    data: List[Contract] = []
 
 
 class Sheet(BaseModel):
