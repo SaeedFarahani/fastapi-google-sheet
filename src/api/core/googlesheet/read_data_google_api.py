@@ -20,3 +20,14 @@ revisions_uri = f'https://www.googleapis.com/drive/v3/files/{sh.id}/revisions'
 headers = {'Authorization': f'Bearer {credentials.get_access_token().access_token}'}
 response = requests.get(revisions_uri, headers=headers).json()
 print(response)
+
+
+def read_data_sheet_using_google_api(sheet_url: str, sheet_name: str) -> pd.DataFrame:
+
+    try:
+        sh = gc.open_by_url(sheet_url)
+        ws = sh.worksheet(sheet_name)
+        df = pd.DataFrame(ws.get_all_records())
+    except:
+        pass
+    return df
