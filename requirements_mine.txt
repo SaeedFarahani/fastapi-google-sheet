@@ -3,3 +3,8 @@ unidecode
 
 loguru
 alembic
+
+
+gspread
+oauth2client
+pandas
