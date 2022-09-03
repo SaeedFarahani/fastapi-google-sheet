@@ -1,0 +1,8 @@
+services:
+  assingmentapi:
+   environment:
+      - SERVICE_NAME=ASSIGNMENT
+      - DB_CON_STRING_ASSIGNMENT
+      - IP_WHITELIST
+      - IP_BLACKLIST
+      - Selected_MIDDLEWARES 

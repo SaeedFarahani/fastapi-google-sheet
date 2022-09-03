@@ -1,0 +1,19 @@
+# Here you should put your micro service's access list
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/check-api,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/check-protected,lsgn
+ASSIGNMENT,POST,/ASSIGNMENT/api/v1/imb/update-conf,lsgn
+ASSIGNMENT,POST,/ASSIGNMENT/api/v1/imb/update-log-level,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/send-request-to-mysele,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/get-request-from-myself,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/raise-exception,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/user/get,lsgn
+ASSIGNMENT,POST,/ASSIGNMENT/api/v1/user/add,lsgn
+ASSIGNMENT,PUT,/ASSIGNMENT/api/v1/user/update,lsgn
+ASSIGNMENT,DELETE,/ASSIGNMENT/api/v1/user/delete,lsgn
+ASSIGNMENT,POST,/ASSIGNMENT/api/v1/users/login,lsgn
+ASSIGNMENT,POST,/ASSIGNMENT/api/v1/users/refresh,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/check-oracle-db-connection,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/train-and-save-model,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/load-and-test-model,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/load-and-tesst-moel-by-index,lsgn
+ASSIGNMENT,GET,/ASSIGNMENT/api/v1/test-accuracy-for-range-of-data,lsgn

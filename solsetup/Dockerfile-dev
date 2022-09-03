@@ -1,0 +1,17 @@
+FROM ttai/ttaipython3.8-slim:1
+
+ENV LANG C.UTF-8
+
+ARG PIP_INDEX_URL
+ARG PIP_TRUSTED_HOST
+ARG PIP_EXTRA_INDEX_URL
+
+RUN python3 -m pip install --upgrade pip
+
+ADD ./project/requirements_base.txt /srv/
+RUN python3 -m pip install -r /srv/requirements_base.txt
+
+ADD ./project/requirements_mine.txt /srv/
+RUN python3 -m pip install -r /srv/requirements_mine.txt
+
+WORKDIR /approot
