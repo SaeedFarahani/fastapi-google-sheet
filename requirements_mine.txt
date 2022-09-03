@@ -1,0 +1,5 @@
+bcrypt
+unidecode
+
+loguru
+alembic
