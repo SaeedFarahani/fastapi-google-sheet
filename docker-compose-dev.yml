@@ -60,6 +60,9 @@ services:
       - "--save 10 100"
       # Set password
       - "--requirepass ubuntu"
+    networks:
+      ttnet: null
+
   redisinsight: # redis db visualization dashboard
       container_name: redisinsight-cont
       image: redislabs/redisinsight
@@ -67,6 +70,8 @@ services:
         - 8001:8001
       volumes:
         - redisinsight:/db
+      networks:
+        ttnet: null
 
 volumes:
   redis-data:
