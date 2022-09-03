@@ -1,0 +1,5 @@
+pandas
+openpyxl
+unidecode
+pyyaml
+argparse

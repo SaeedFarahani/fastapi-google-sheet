@@ -1,0 +1,2 @@
+# envs here will be added to the end of env file in artinsole/setupsols/assingment/.env for more info read readme file in artilsol/assets/traefik
+Selected_MIDDLEWARES=base-inflightreq,secure-headers,assingment-ratelimit,assingment-buffer-limit

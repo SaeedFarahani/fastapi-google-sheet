@@ -1,0 +1,80 @@
+version: '3.7'
+services:
+  contractapi:
+    build:
+      context: ${VOLUME_DIR_SERVICES}/assignment
+      dockerfile: Dockerfile
+      args:
+      - PIP_INDEX_URL
+      - PIP_EXTRA_INDEX_URL
+      - PIP_TRUSTED_HOST
+      - PIP_TIMEOUT
+    command: bash ./cmd.sh
+    working_dir: /approot/src
+    ports:
+    - ${PORT_2}03:8000
+    volumes:
+    - /etc/localtime:/etc/localtime:ro
+    - ${VOLUME_DIR_SERVICES}/assignment/src:/approot
+    - ${VOLUME_DIR_APP_DATA}/assignment/data:${APP_DATA}
+    - ${VOLUME_DIR_CUS_DATA}/assignment/data:${CUS_DATA}
+    environment:
+    - DATA_ROOT=/srv/app_data
+    - INTERNET_PROXY
+    - NO_PROXY
+    - BOXNAME=faceidapi
+    - PIP_TIMEOUT
+    - CUS_DATA
+    - IP_BLACKLIST
+    - SERVICE_NAME=FACEID
+    - APP_ROOT
+    - DEBUG=True
+    - BASE_TIMEZONE=Asia/Tehran
+    - EOAPI
+    - APP_DATA
+    - Selected_MIDDLEWARES
+    - IP_WHITELIST
+    - CONF_DATA
+    - IWO
+    - DB_CON_STRING_FACEID
+    - TARGET_DEPLOY_TYPE
+    - STARTUP_SLEEP_TIME
+    user: ${CUID}
+    restart: always
+    networks:
+      ttnet: null
+    image: faceidsol_faceid:dev
+  redis:
+    container_name: redis-cont
+    image: "redis:alpine"
+    environment:
+      - REDIS_PASSWORD=ubuntu
+      - REDIS_REPLICATION_MODE=master
+    ports:
+      - "6379:6379"
+    volumes:
+      # save redisearch data to your current working directory
+      - ./redis-data:/data
+    command:
+      # Save if 100 keys are added in every 10 seconds
+      - "--save 10 100"
+      # Set password
+      - "--requirepass ubuntu"
+  redisinsight: # redis db visualization dashboard
+      container_name: redisinsight-cont
+      image: redislabs/redisinsight
+      ports:
+        - 8001:8001
+      volumes:
+        - redisinsight:/db
+
+volumes:
+  redis-data:
+  redisinsight:
+
+networks:
+  ttnet:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: ${IP_3}.0/24
