@@ -1,0 +1,7 @@
+filepath: ../app_data/assingmentapi/servicetests/params.pkl
+base_url: https://localhost:7111
+sleep: 0
+pass_percentage: 1.0
+early_stop: false
+mode: critical
+solution_rooms: ''
