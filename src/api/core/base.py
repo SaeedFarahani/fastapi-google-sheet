@@ -1,8 +1,6 @@
 import os
 
 from sqlalchemy.orm import Session
-from api.dbutils import crud
-from api.dbutils.database import SessionLocal
 # from api.core import config
 from api.core import utils
 
