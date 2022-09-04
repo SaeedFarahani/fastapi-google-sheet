@@ -1,9 +1,0 @@
-# Passed tests are more than pass_percentage
-# Passed tests are less than pass_percentage -> exit(-1)
-filepath: "../app_data/assingmentapi/data/servicetests/params.pkl"
-base_url: https://localhost:7111
-sleep: 0
-pass_percentage: 1.0  # [0, 1.0]
-early_stop: False
-mode: critical  # critical|noncritical
-
