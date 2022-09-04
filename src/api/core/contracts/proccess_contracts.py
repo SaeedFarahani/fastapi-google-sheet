@@ -33,7 +33,7 @@ class ProcessContract:
             tt_logger.error(f"image file in this url{contract.image} is not valid")
 
     @staticmethod
-    async def validate_parse_data_from_data_frame(df: pd.DataFrame):
+    async def process_validate_parse_data_from_data_frame(df: pd.DataFrame):
         columns = ['firstname', 'lastname', 'street', 'zip', 'city', 'image']
         if not pd.Series(columns).isin(df.columns).all():
             raise Exception('column names are not valid')
