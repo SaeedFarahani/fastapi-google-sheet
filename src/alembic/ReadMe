@@ -1,8 +1,0 @@
-use this urls as SQLAlchemy urls in alembic.ini or get it from .env file
-# sqlalchemy.url = sqlite:///./sql_app.db
-#sqlalchemy.url = mysql+pymysql://aiuser_71258:XCC4MC0Pb7se4t@mariadb/assingment
-#sqlalchemy.url = oracle://scott:tiger@192.168.10.34:1521/ora8test
-
-alembic revision --autogenerate --rev-id=2 : makes migration with revision id = 2
-alembic upgrade 1:2 --sql : returns sql scripts of database migrations from first to second point
-alembic upgrade head --sql : returns sql scripts of all database migrations from start to end point
