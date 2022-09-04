@@ -69,8 +69,11 @@ def check_error_in_response(response):
 class ContractResponse(APIResponse):
 
     def set_ok(self):
-        return self.set_response(True, "mission accomplished", "s200", None)
+        return self.set_response(True, "The request was processed successfully", "s200", None)
 
     def set_error(self):
         return self.set_response(False, "Error in operation", "e400", None)
+
+    def set_error_download_sheet(self):
+        return self.set_response(False, "Error when try to download a sheet", "e401", None)
 

@@ -1,4 +1,4 @@
-/redis-data
+/redis-data/*
 */data/
 !.gitignore
 /.idea
