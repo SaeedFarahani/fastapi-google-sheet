@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 import sys
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+
 
 def test_read_data_as_csv_file():
     from api.core.googlesheet.read_data_export_csv import read_data_from_csv_sheet_to_panda
@@ -21,4 +21,4 @@ def test_read_data_using_google_api():
     pd_file = pd.read_csv('tests/sample_data/sheed_data.csv')
     c_result = pd_file[pd_sheet.apply(tuple, 1).isin(pd_file.apply(tuple, 1))]
     print(c_result)
-    assert c_result.shape == (4, 6)
+    assert c_result.shape == (3, 6)
