@@ -2,7 +2,7 @@ import pytest
 
 
 def pytest_addoption(parser):
-    parser.addoption("--filepath", action="store", default='./config.yml', help="Path to config file for test")
+    parser.addoption("--filepath", action="store", default='./config.yml', help="Path to config file for tests")
     # parser.addoption("--base-url", action="store", default='', help="ASSIGNMENT traefik url")    
     # parser.addoption("--sleep", action="store", default=0.5, help="Sleep time between each request. default: 0.5")
 
