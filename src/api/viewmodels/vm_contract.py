@@ -29,6 +29,9 @@ class Contracts(ResponseBase):
     data: List[Contract] = []
 
 
-class Sheet(BaseModel):
+class SheetURL(BaseModel):
     sheet_url: str
-    sheet_name: str
+
+
+class SheetName(SheetURL):
+    sheet_url: str

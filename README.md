@@ -1,4 +1,22 @@
 
+A customer would like to have a web application that displays a contact list.
+
+The data consists of:
+
+- Firstname;
+- Lastname;
+- Street;
+- Zip;
+- City;
+- Image;
+
+The data set is hosted in Google Docs as a spreadsheet
+
+
+The customer is responsible for the contents of this spreadsheet and therefore, the data is
+not always reliable. For example, the size of the images is not guaranteed to be optimized
+for use in a responsive web application.
+
 
 ![](docs/image.png)
 
